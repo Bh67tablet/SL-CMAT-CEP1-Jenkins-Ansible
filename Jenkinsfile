@@ -4,7 +4,7 @@ pipeline{
         stage('clone the repo')
         {
             steps{
-                git branch: 'main', url: 'https://github.com/Sonal0409/SL-CMAT-CEP1-Jenkins-Ansible.git'
+                git branch: 'main', url: 'https://github.com/Bh67tablet/SL-CMAT-CEP1-Jenkins-Ansible.git'
             }
         }
         
