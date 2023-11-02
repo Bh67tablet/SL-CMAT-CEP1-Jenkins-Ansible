@@ -11,13 +11,13 @@ pipeline{
       stage('install maven & Docker')
       {
           steps{
-              ansiblePlaybook credentialsId: 'ansible_credentials', disableHostKeyChecking: true, installation: 'myansible', inventory: 'dev.inv', playbook: 'PlaybookInstall.yml'
+              ansiblePlaybook credentialsId: 'ansiuser', disableHostKeyChecking: true, installation: 'myansible', inventory: 'dev.inv', playbook: 'PlaybookInstall.yml'
           }
       }
       stage('Execute Ansible deployment playbook')
       {
           steps{
-              ansiblePlaybook credentialsId: 'ansible_credentials', disableHostKeyChecking: true, installation: 'myansible', inventory: 'dev.inv', playbook: 'PlaybookDeployment.yml'
+              ansiblePlaybook credentialsId: 'ansiuser', disableHostKeyChecking: true, installation: 'myansible', inventory: 'dev.inv', playbook: 'PlaybookDeployment.yml'
           }
       }
     }
