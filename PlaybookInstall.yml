@@ -3,10 +3,4 @@
   become: true
   tasks:
   - name: update apt-get repo
-    command: sudo apt-get update
-  - name: Install maven on servers
-    command: sudo apt-get install maven -y
-  - name: install docker on servers
-    command: sudo apt-get install -y docker-ce
-  - name: start docker on servers
-    service: name=docker state=started
+    command: sudo apt-get update -y
