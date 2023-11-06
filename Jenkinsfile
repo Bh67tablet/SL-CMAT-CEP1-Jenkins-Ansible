@@ -14,11 +14,5 @@ pipeline{
               ansiblePlaybook credentialsId: 'ansiuser', disableHostKeyChecking: true, installation: 'myansible', inventory: 'dev.inv', playbook: 'PlaybookInstall.yml'
           }
       }
-      stage('Execute Ansible deployment playbook')
-      {
-          steps{
-              ansiblePlaybook credentialsId: 'ansiuser', disableHostKeyChecking: true, installation: 'myansible', inventory: 'dev.inv', playbook: 'PlaybookDeployment.yml'
-          }
-      }
     }
 }
