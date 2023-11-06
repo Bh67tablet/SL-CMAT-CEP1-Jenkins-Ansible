@@ -6,5 +6,3 @@
     command: sudo apt-get update -y
   - name: Install maven on servers
     command: sudo apt-get install maven -y
-  - name: install docker on servers
-    command: sudo apt-get install -y docker-ce
