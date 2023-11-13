@@ -5,7 +5,7 @@ pipeline{
       stage('Clone the repo with playbook')  
       {
           steps{
-              git branch: 'main', url: 'https://github.com/Bh67tablet/SL-CMAT-CEP1-Jenkins-Ansible.git'
+              git branch: 'main', url: 'https://github.com/Bh67tablet/simplylearn_Jenkins_Ansible.git'
           }
       }
       stage('install maven & Docker')
